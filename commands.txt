@@ -1,0 +1,19 @@
+Configuração GIT:
+---- git config --global user.name SuzaneChimenass
+---- git config --global user.email suzanecamila879@gmail.com
+
+Criar um projeto Angular:
+---- ng new zayaflix
+
+Executar o projeto:
+---- cd zayaflix
+---- ng serve -o
+
+Criando componente:
+---- ng g c pages/home
+---- ng g c pages/search
+---- ng g c pages/details
+
+Criar um serviço:
+---- ng g s services/movieApi
+

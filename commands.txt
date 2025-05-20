@@ -2,6 +2,8 @@ Configuração GIT:
 ---- git config --global user.name SuzaneChimenass
 ---- git config --global user.email suzanecamila879@gmail.com
 
+npm i 
+
 Criar um projeto Angular:
 ---- ng new zayaflix
 

@@ -30,3 +30,36 @@
         font-size: 20px;
     }
 }
+
+.rowposter{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    cursor: default;
+    padding: 20px;
+    -webkit-overflow-scrolling: touch;
+    will-change: transform;
+}
+
+.rowposter a {
+    cursor: inherit;
+}
+
+.rowposter::-webkit-scrollbar{
+    display: none;
+}
+.rowposter a img {
+    margin-right: 10px;
+    border-radius: 20px;
+    box-sizing: content-box;
+    max-height: 300px;
+    object-fit: contain;
+    transition: transform 450ms;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+.rowpostera img:hover{
+    transform: scale(1.12);
+    z-index: 900;
+}

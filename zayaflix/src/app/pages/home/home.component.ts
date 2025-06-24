@@ -12,42 +12,44 @@ import { RouterLink } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  constructor(private service: MovieApiService){};
-  
+  constructor(private service: MovieApiService) {};
+
   bannerResults: any = [];
   trendingMovieResults: any = [];
   trendingSerieResults: any = [];
   popularActionMovieResults: any = [];
 
-
-  ngOnInit(): void{
+  ngOnInit(): void {
     this.bannerData();
     this.trendingMovieData();
     this.trendingSerieData();
     this.popularActionMovieData();
   }
-  
+
   // Banner
-  bannerData(){
+  bannerData() {
     this.service.bannerApiData().subscribe((result) => {
       //console.log(result.results);
       this.bannerResults = result.results;
     })
   }
-  trendingMovieData(){
+
+  trendingMovieData() {
     this.service.trendingMovieApiData().subscribe((result) => {
       this.trendingMovieResults = result.results;
     })
   }
-  trendingSerieData(){
-    this.service.trendingSerieApiData().subscribe((result)=> {
+
+  trendingSerieData() {
+    this.service.trendingSerieApiData().subscribe((result) => {
       this.trendingSerieResults = result.results;
     })
-    
   }
-  popularActionMovieData(){
-    this.service.popularActionMovieApiData().subscribe((result)=> {
-      this.trendingMovieResults = result.results;
+
+  popularActionMovieData() {
+    this.service.popularActionMovieApiData().subscribe((result) => {
+      this.popularActionMovieResults = result.results;
     })
   }
+
 }
